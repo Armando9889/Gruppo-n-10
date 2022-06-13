@@ -18,6 +18,12 @@ Password: prova12
        
 
 ➢ Manager del gruppo: Giuseppe Sabia
+
+
 ➢ Manager della valutazione: Armando Imbimbo
+
+
 ➢ Manager della documentazione: Michele Del Mastro
+
+
 ➢ Manager di progetto: Michele Del Mastro, Armando Imbimbo, Giuseppe Sabia.
