@@ -5,15 +5,29 @@ Il sistema che si intende progettare è rivolto a persone che migrano verso il n
 Per navigare all'interno della nostra web-app bisogna eseguire con qualsiasi browser (Chrom,Firefox....), la pagina principale HOME.HTML che è presente all'nterno della directory usando le suddette credenziali.
 
 Credenziali Login Utente
+
+
 Username: Assan98
+
+
 Password: prova12
+
 
 Credenziali Login Lavoro
+
+
 Username: Air_Campania
+
+
 Password: prova12
 
+
 Credenziali Login Alloggi
+
+
 Username: Case_AV
+
+
 Password: prova12
        
 
