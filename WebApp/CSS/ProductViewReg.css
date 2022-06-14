@@ -1,0 +1,161 @@
+@charset "ISO-8859-1";
+
+body, html {
+    background-image: url(../OtherPage/Images/bglogin.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-item {
+height: 100vh;
+min-height: 310px;
+background: no-repeat scroll center scroll;
+-webkit-backdrop-size: cover;
+background-size: cover;
+}
+
+.carousel-item::before{
+content: "";
+display: block;
+position: absolute;
+top:0;
+left: 0;
+bottom: 0;
+right: 0;
+background: #000;
+opacity: 0.2;
+}
+
+.carousel-caption{
+bottom: left;
+padding-left: 100px;
+padding-right: 100px;
+}
+
+.carousel-caption h3{
+font-size: 70px;
+font-weight: 90;
+margin: auto;
+width: 110%;
+padding: 100px;
+}
+
+/*Bottone*/
+
+.containerButton {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
+min-height: 45vh;
+}
+
+.prova, .prova1, .prova2{
+-moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+background-color: #B7BEFF;
+font-family: Courier, monospace;
+width:90px;
+}
+
+
+.prova:hover{
+box-shadow: inset 300px 0 0 0 #00FFA3;
+cursor: pointer;
+color: #000;
+}
+
+.prova1:hover{
+box-shadow: inset 300px 0 0 0 #000;
+cursor: pointer;
+color: #000;
+}
+
+p#login{
+font-size: 35px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: #000;
+font-weight: bold;
+font-style:italic;
+}
+	
+button#iscriviti{
+-moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+background-color: #005DB3;
+font-family: 'Iceberg';
+width:100px;
+color: white;
+}
+	
+button#annulla{
+    -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+background-color: #005DB3;
+font-family: 'Iceberg';
+width:100px;
+color: white;
+}
+	
+input[type=text] {
+border: 2px solid #D5D8DE;
+font-family: 'PT Mono';
+border-radius: 5px;
+height: 30px;
+width: 320px;
+}
+	
+input[type=password] {
+border: 2px solid #D5D8DE;
+font-family: 'PT Mono';
+border-radius: 5px;
+height: 30px;
+width: 320px;
+}
+	
+input[type=number] {
+    border: 2px solid #D5D8DE;
+    font-family: 'PT Mono';
+    border-radius: 5px;
+    height: 30px;
+    width: 320px;
+    }
+        
+table{
+width: 800px;
+border: 15px solid black;
+}
+	
+table, th, td{
+text-align: center;
+border: 4px solid red;
+border-collapse: collapse;
+}
+	
+th, td {
+padding: 15px;
+border: 15 px solid black;
+}
+
+label{
+    font-size:x-large;
+    color: #000;
+}
+
+legend{
+    font-size: x-large;
+    color: #000;
+}
+
+.flex-container {
+    display: flex;
+    background-image:url(../OtherPage/Images/Rectangleu.png);
+    -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+label#lFoto{
+    font-size: medium;
+}

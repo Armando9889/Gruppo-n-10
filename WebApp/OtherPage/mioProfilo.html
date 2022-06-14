@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+	crossorigin="anonymous">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="../CSS/mioProfilo.css" type="text/css">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+<title>My-Profile</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+                  <a href="home-login.html" class="navbar-brand"><img src="Images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"><input type="submit" value="Immigration" style="border: none; outline: none; background-color: transparent;">
+                       
+          </a>
+          <ul class="nav justify-content-end">
+          
+            
+            <div class="nav-link active" aria-current="page">Ciao Assan</div>
+			<li class="nav-item">
+         
+               </li>
+						<li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../home.html">logout</a>
+               </li>
+         </ul>
+        </div>
+     </nav>
+
+     <div class="wrapper">
+		<div class="sidebar">
+            <h2>Assan Saare</h2>
+			<ul>
+				<li><button onclick="indietro()" style="text-decoration: none; border: none; background: transparent; color: #fff;" ><i>
+                        Informazioni User</i></button></li>
+				<li><button onclick="stato()" style="text-decoration: none; border: none; background: transparent; color: #fff;"><i >
+							Stato Prenotazione</i></button></li>
+			</ul>
+		</div>
+
+
+		<div class="main_content">
+			<div class="header"
+				style="background-color: rgba(255, 255, 255, 0.05);">
+				<h2
+					style="outline: none; border: none; background-color: rgba(255, 255, 255, 0.05); color: black;">MIO
+					PROFILO</h2>
+					<img id="bg"class="d-block w-100" src="Images/bg.png" style="opacity: 0.8; height:470px" alt="...">
+			</div>
+
+            <div class="info" id="ciao" style="display: none;">
+                <div>
+                    <br />
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOME</th>
+                            <th scope="col">COGNOME</th>
+                            <th scope="col">TELEFONO</th>
+                            <th scope="col">ISTRUZIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Assan</th>
+                            <td>Saare</td>
+                            <td id="num">73827487</td>
+                            <td id="dip">Diploma Superiore</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="modifica()">Modifica Profilo</button>
+				</div>
+			</div>
+
+            <div class="info" id="stato" style="display: none;">
+                <div>
+                    <br />
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOME AZIENDA</th>
+                            <th scope="col">NUMERO DI TELEFONO</th>
+                            <th scope="col">CITTA'</th>
+                            <th scope="col">REGIONE</th>
+                            <th scope="col">VIA</th>
+							<th scope="col">RIFERIMENTO ANNUNCIO</th>
+                            <th scope="col">FOTO</th>
+                            <th scope="col">STATO</th>
+                            <th scope="col">ELIMINAZIONE RICHIESTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">AIR CAMPANIA SRL</th>
+                            <td>08120415</td>
+                            <td>Avellino</td>
+                            <td>Campania</td>
+                            <td>Via Fasano, Avellino AV</td>
+							<td>Riparazione veicoli</td>
+                            <td><img src="Images/air.png" style="width: 80px; right: 80px;"></td>
+                            <td id="pr"><img onclick="movimento()"id="verde" src="Images/eye.png" style="width: 80px; right: 80px;"></td>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <th scope="row">CASE POPOLARI</th>
+                                <td>08120499</td>
+                                <td>Avellino</td>
+                                <td>Campania</td>
+                                <td>Via Piave, Avellino AV</td>
+								<td>Alloggio: Via Piave</td>
+                                <td><img src="Images/case_av.png" style="width: 80px; right: 80px;"></td>
+                                <td id="pr1"><img onclick="movimento1()"id="rosso"src="Images/eye.png" style="width: 80px; right: 80px;"></td>
+                            </tr>
+                        </thead>
+                        <tr id="eliminare">
+                            <th scope="row">LOGISTICA PORTO</th>
+                            <td>08169420</td>
+                            <td>Salerno</td>
+                            <td>Campania</td>
+                            <td>Via Porto, Salerno SA</td>
+							<td>Magazziniere</td>
+                            <td><img src="Images/porto.png" style="width: 80px; right: 80px;"></td>
+                            <td id="pr2"><img onclick="movimento2()"id="grigio"src="Images/eye.png" style="width: 80px; right: 80px;"></td>
+                            <td><img onclick="elimina()" src="Images/cestino.png" style="width: 45px; right: 45px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+			</div>
+			</div>
+
+            <div class="info" id="modifica" style="display: none;">
+                <div>
+                    <br />
+                    <label style="display: inline-block; vertical-align: baseline; width: 150px;" for="telefono">Numero di telefono:</label>
+                    <input  type="text" id="telefono" name="telefono">
+                    
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="istruzione">Livello di istruzione:</label>
+                    <input type="text" id="istruzione" name="istruzione">
+                    </br>
+                    </br>
+                    <button onclick="input()" style="display: inline-block; vertical-align: baseline; width: 125px;" id = "ok" name="ok" value="Ok"> Fatto </button>
+                    &nbsp;
+				    <button onclick="annulla()" style="display: inline-block; vertical-align: baseline; width: 125px;" id = "reset" value="Reset"> Annulla </button>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+    
+
+    <script>
+        function indietro() {
+            document.getElementById("ciao").style.display = "block";
+				
+				document.getElementById("stato").style.display = "none";
+				document.getElementById("modifica").style.display = "none";
+				var elem = document.getElementById("bg");
+elem.parentNode.removeChild(elem);
+        }
+    </script>
+
+    <script>
+        function stato(){
+            document.getElementById("stato").style.display = "block";
+				
+				 document.getElementById("ciao").style.display = "none";
+				 document.getElementById("modifica").style.display = "none";
+				 var elem = document.getElementById("bg");
+elem.parentNode.removeChild(elem);
+        }
+    </script>
+
+<script>
+    function modifica(){
+        document.getElementById("modifica").style.display = "block";
+		  
+		      document.getElementById("ciao").style.display = "none";
+				document.getElementById("stato").style.display = "none";
+				var elem = document.getElementById("bg");
+elem.parentNode.removeChild(elem);
+    }
+</script>
+
+<script>
+var istruzione = document.getElementById("istruzione");
+var telefono = document.getElementById("telefono"); 
+if(istruzione!=""&&telefono!=""){
+sessionStorage.setItem("dip",username.value);
+sessionStorage.setItem("num",password.value);
+}
+</script>
+
+
+		  
+<script>
+ function input() {
+var istruzione = document.getElementById("istruzione");
+var telefono = document.getElementById("telefono"); 
+var numt = document.getElementById("telefono");
+  
+  if(!isNaN(numt.value)){}
+  else{
+  	alert("Attenzione! Il campo NUMERO DI TELEFONO richiede solo numeri oppure è vuoto"); 
+  	return false;
+  }
+  
+  var letter = ('^[a-zA-Z]+$');
+
+  if(istruzione.value.match(letter)) {}
+  else{ 
+    alert("Attenzione! Il campo ISTRUZIONE richiede solo lettere oppure è vuoto");
+	return false; 
+  }
+  
+if(telefono.value!=""&&istruzione.value!=""){
+document.getElementById("dip").innerHTML =istruzione.value;
+document.getElementById("num").innerHTML =telefono.value;
+document.getElementById("ciao").style.display = "block";
+document.getElementById("modifica").style.display = "none";
+}
+}
+</script>
+
+		  
+<script>
+ function annulla() {
+document.getElementById("ciao").style.display = "block";
+document.getElementById("modifica").style.display = "none";
+}
+</script>
+
+<script>
+function elimina() {
+var elem = document.getElementById("eliminare");
+    elem.parentNode.removeChild(elem);
+}
+</script>
+		
+		
+		
+<script>
+function movimento() {
+var elem = document.getElementById("verde");
+  elem.parentNode.removeChild(elem); 
+let btn = document.createElement("button");
+btn.innerHTML = "Accettato";
+btn.className="mia1"
+document.getElementById("pr").appendChild(btn);
+}
+</script>
+
+
+<script>
+function movimento1() {
+var elem = document.getElementById("rosso");
+  elem.parentNode.removeChild(elem); 
+let btn = document.createElement("button");
+let btn1 = document.createElement("button");
+
+const h6 = document.createElement("h6");
+const textNode = document.createTextNode("Signor. Assan per problemi interni non abbiamo potuto accettare la richiesta per la prenotazione del posto");
+h6.appendChild(textNode);
+document.getElementById("pr1").appendChild(h6);
+btn1.innerHTML = "Cliccami";
+btn1.className="prova3"
+document.getElementById("pr1").appendChild(btn1);
+btn1.onclick = function () {
+h6.parentNode.removeChild(h6);
+btn1.parentNode.removeChild(btn1);
+btn.innerHTML = "Rifiutato";
+btn.className="mia"
+document.getElementById("pr1").appendChild(btn);
+};
+
+}
+</script>
+
+
+<script>
+function movimento2() {
+var elem = document.getElementById("grigio");
+elem.parentNode.removeChild(elem); 
+let btn = document.createElement("button");
+btn.innerHTML = "In Attesa";
+btn.className="mia3"
+document.getElementById("pr2").appendChild(btn);
+}
+</script>
+	  <div class="instragram" style="position: fixed; left: 0px; bottom: 0px;">
+    <a href="https://www.instagram.com/immigration_progetto/"> <img src="Images/instagram.png" style="width: 30px; height: 30px;"></a>     
+  </div>
+</body>
+</html>

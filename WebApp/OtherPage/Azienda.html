@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+	crossorigin="anonymous">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="../CSS/mioProfilo.css" type="text/css">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+<title>Immigration</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+                  <a class="navbar-brand"><img src="Images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"><input type="submit" value="Immigration" style="border: none; outline: none; background-color: transparent;">
+                       
+          </a>
+          <ul class="nav justify-content-end">
+          
+            
+            <div class="nav-link active" aria-current="page">Ciao Air Campania</div>
+						<li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../home.html">logout</a>
+               </li>
+         </ul>
+        </div>
+     </nav>
+
+     <div class="wrapper">
+		<div class="sidebar">
+            <h2>AIR CAMPANIA</h2>
+			<ul>
+				<li><button onclick="indietro()" style="text-decoration: none; border: none; background: transparent; color: #fff;" ><i>
+                        Visualizza Candidature</i></button></li>
+				<li><button onclick="stato()" style="text-decoration: none; border: none; background: transparent; color: #fff;"><i >
+							Lista Annunci</i></button></li>
+			</ul>
+		</div>
+		
+	
+
+		<div class="main_content">
+			<div class="header"
+				style="background-color: rgba(255, 255, 255, 0.05);">
+				<h2
+					style="outline: none; border: none; background-color: rgba(255, 255, 255, 0.05); color: black;">MIO
+					PROFILO</h2>
+					<img id="bg"class="d-block w-100" src="Images/bg.png" style="opacity: 0.8; height:470px" alt="...">
+			</div>
+
+            <div class="info" id="ciao" style="display: none;">
+                <div>
+                    <br />
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOME</th>
+                            <th scope="col">COGNOME</th>
+                            <th scope="col">TELEFONO</th>
+                            <th scope="col">Annucio Candidatura</th>
+                            <th scope="col">ACCETTA O RIFIUTA</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Assan</th>
+                            <td>Saare</td>
+                            <td>73827487</td>
+                            <td>Riparazione veicoli</td>
+                            <td id="pr"><img src="Images/ok.png" style="width: 40px; right: 40px;" onclick="accetto()"id="ok">&nbsp;&nbsp;&nbsp;&nbsp;<img onclick="rifiuta()" id="no"src="Images/no.png" style="width: 40px; right: 40px;" </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Anuar</th>
+                            <td>Kamal</td>
+                            <td>4578964</td>
+                            <td>Riparazione bulloni</td>
+                           <td id="pr1"><img src="Images/ok.png" style="width: 40px; right: 40px;" onclick="accetto1()"id="ok1">&nbsp;&nbsp;&nbsp;&nbsp;<img onclick="rifiuta1()"id="no1"src="Images/no.png" style="width: 40px; right: 40px;" </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Latifa</th>
+                            <td>Zineb</td>
+                            <td>3214765</td>
+                            <td>Gestione magazzino</td>
+           <td id="pr2"><img src="Images/ok.png" style="width: 40px; right: 40px;" onclick="accetto2()"id="ok2">&nbsp;&nbsp;&nbsp;&nbsp;<img onclick="rifiuta2()"id="no2"src="Images/no.png" style="width: 40px; right: 40px;" </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Anuar</th>
+                            <td>Zineb</td>
+                            <td>4356768</td>
+                            <td>Smarrimento prodotti</td>
+                            <td id="pr3"><img src="Images/ok.png" style="width: 40px; right: 40px;" onclick="accetto3()"id="ok3">&nbsp;&nbsp;&nbsp;&nbsp;<img onclick="rifiuta3()"id="no3"src="Images/no.png" style="width: 40px; right: 40px;" </td>
+                        </tr>
+                    </tbody>
+                </table>
+				</div>
+			</div>
+
+            <div class="info" id="stato" style="display: none;">
+                <div>
+                    <br />
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOME AZIENDA</th>
+                            <th scope="col">NUMERO TELTEFONO</th>
+                            <th scope="col">CITTA'</th>
+                            <th scope="col">REGIONE</th>
+                            <th scope="col">VIA</th>
+                            <th scope="col">FOTO</th>
+                            <th scope="col">ANNUNCIO DISPONIBILE</th>
+                            <th scope="col">ELIMINAZIONE ANNUNCIO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="el">
+                            <th scope="row">AIR CAMPANIA SRL</th>
+                            <td>08120415</td>
+                            <td>Avellino</td>
+                            <td>Campania</td>
+                            <td>Via Fasano, Avellino AV</td>
+                            <td><img src="Images/air.png" style="width: 80px; right: 80px;"></td>
+                            <td>Riparazione veicoli</td>
+                            <td><img onclick="elimina()"src="Images/cestino.png" style="width: 45px; right: 45px;"></td>
+                        </tr>
+                        <tbody>
+                            <tr id="el1">
+                                <th  scope="row">AIR CAMPANIA SRL</th>
+                                <td>08120415</td>
+                                <td>Avellino</td>
+                                <td>Campania</td>
+                                <td>Via Fasano, Avellino AV</td>
+                                <td><img src="Images/air.png" style="width: 80px; right: 80px;"></td>
+                                <td>Riparazione bulloni</td>
+                                <td><img onclick="elimina1()"src="Images/cestino.png" style="width: 45px; right: 45px;"></td>
+                            </tr>
+                        </thead>
+                        <tr id="el2">
+                            <th  scope="row">AIR CAMPANIA SRL</th>
+                            <td>08120415</td>
+                            <td>Avellino</td>
+                            <td>Campania</td>
+                            <td>Via Fasano, Avellino AV</td>
+                            <td><img src="Images/air.png" style="width: 80px; right: 80px;"></td>
+                            <td>Gestione magazzino</td>                           
+                            <td><img onclick="elimina2()"src="Images/cestino.png" style="width: 45px; right: 45px;"></td>
+                        </tr>
+								<tr id="list">
+                        
+                        </tr>
+								<tr id="list1">
+                            
+                        </tr>
+								
+                    </tbody>
+                </table>
+					<button onclick="modifica()">Aggiungi Annunci</button>
+			</div> 
+			</div>
+			
+
+										  
+            <div class="info" id="modifica" style="display: none;">
+                <div>
+                    <br />
+                    <label style="display: inline-block; vertical-align: baseline; width: 150px;" for="telefono">Nome Azienda:</label>
+                    <input  type="text" id="nome" name="nome">
+                    
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="istruzione">Numero di telefono:</label>
+                    <input type="text" id="tel" name="telefono">
+
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="istruzione">Numero di posti:</label>
+                    <input type="text" id="posti" name="posti">
+
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="Città">Città:</label>
+                    <input type="text" id="città" name="città">
+
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="regione">Regione:</label>
+                    <input type="text" id="regione" name="regione">
+
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="via">Via:</label>
+                    <input type="text" id="via" name="via">
+
+                    <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="istruzione">Istruzione minima:</label>
+                    <input type="text" id="istruzione" name="istruzione">
+						  
+						  <br><label style="display: inline-block; vertical-align: baseline; width: 150px;" for="lavofferto">Lavoro Offerto:</label>
+                    <input type="text" id="lavofferto" name="lavofferto">
+
+                    </br>
+                    </br>
+                   <div id="ec"> <button onclick="input()"style="display: inline-block; vertical-align: baseline; width: 125px;" id = "disa" name="ok" value="Ok"> Fatto </button>
+                    &nbsp;
+				    <button onclick="annulla()" style="display: inline-block; vertical-align: baseline; width: 125px;" id = "reset" value="Reset"> Annulla </button></div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+    
+
+    <script>
+        function indietro() {
+            document.getElementById("ciao").style.display = "block";
+				 document.getElementById("stato").style.display = "none";
+				 document.getElementById("modifica").style.display = "none";
+				 var elem = document.getElementById("bg");
+				elem.parentNode.removeChild(elem);
+        }
+    </script>
+
+    <script>
+        function stato(){
+            document.getElementById("stato").style.display = "block";
+				document.getElementById("ciao").style.display = "none";
+				  document.getElementById("modifica").style.display = "none";
+				  var elem = document.getElementById("bg");
+				elem.parentNode.removeChild(elem);
+        }
+    </script>
+
+<script>
+    function modifica(){
+        document.getElementById("modifica").style.display = "block";
+		  document.getElementById("stato").style.display = "none";
+		  document.getElementById("ciao").style.display = "none";
+		  var elem = document.getElementById("bg");
+		elem.parentNode.removeChild(elem);
+    }
+</script>
+
+<script>
+function accetto() {
+var elem = document.getElementById("no");
+  elem.parentNode.removeChild(elem); 
+}
+</script>
+
+<script>
+function accetto1() {
+var elem = document.getElementById("no1");
+  elem.parentNode.removeChild(elem); 
+}
+</script>
+
+<script>
+function accetto2() {
+var elem = document.getElementById("no2");
+  elem.parentNode.removeChild(elem); 
+}
+</script>
+
+<script>
+function accetto3() {
+var elem = document.getElementById("no3");
+  elem.parentNode.removeChild(elem); 
+}
+</script>
+
+<script>
+function rifiuta() {
+var elem = document.getElementById("no");
+  elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("ok");
+  elem1.parentNode.removeChild(elem1);  
+const input = document.createElement("input");  
+input.type = "text";  
+input.className="prova"
+document.getElementById("pr").appendChild(input);
+let btn = document.createElement("button");
+btn.innerHTML = "invia";
+btn.className="prova1"
+document.getElementById("pr").appendChild(btn);
+btn.onclick = function () {
+  input.parentNode.removeChild(input);
+  btn.parentNode.removeChild(btn);
+let img = document.createElement("img");
+img.src = "Images/no.png";
+img.style.width = "40px";
+img.style.right = "40px";
+img.style.marginLeft = "50px";
+document.getElementById("pr").appendChild(img);
+};
+}
+</script>	
+
+
+
+<script>
+function rifiuta1() {
+var elem = document.getElementById("no1");
+  elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("ok1");
+  elem1.parentNode.removeChild(elem1); 
+const input = document.createElement("input");  
+input.type = "text"; 
+input.className="prova"
+document.getElementById("pr1").appendChild(input);
+let btn = document.createElement("button");
+btn.innerHTML = "invia";
+btn.className="prova1"
+document.getElementById("pr1").appendChild(btn);
+btn.onclick = function () {
+  input.parentNode.removeChild(input);
+  btn.parentNode.removeChild(btn);
+let img = document.createElement("img");
+img.src = "Images/no.png";
+img.style.width = "40px";
+img.style.right = "40px";
+img.style.marginLeft = "50px";
+document.getElementById("pr1").appendChild(img);
+};
+}
+</script>
+
+<script>
+function rifiuta2() {
+var elem = document.getElementById("no2");
+  elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("ok2");
+  elem1.parentNode.removeChild(elem1);
+const input = document.createElement("input");  
+input.type = "text";  
+input.className="prova"
+document.getElementById("pr2").appendChild(input);
+let btn = document.createElement("button");
+btn.innerHTML = "invia";
+btn.className="prova1"
+document.getElementById("pr2").appendChild(btn);
+btn.onclick = function () {
+  input.parentNode.removeChild(input);
+  btn.parentNode.removeChild(btn);
+let img = document.createElement("img");
+img.src = "Images/no.png";
+img.style.width = "40px";
+img.style.right = "40px";
+img.style.marginLeft = "50px";
+document.getElementById("pr2").appendChild(img);
+};
+}
+</script>
+
+<script>
+function rifiuta3() {
+var elem = document.getElementById("no3");
+  elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("ok3");
+  elem1.parentNode.removeChild(elem1); 
+const input = document.createElement("input");  
+input.type = "text";  
+input.className="prova"
+document.getElementById("pr3").appendChild(input);
+let btn = document.createElement("button");
+btn.innerHTML = "invia";
+btn.className="prova1"
+document.getElementById("pr3").appendChild(btn);
+btn.onclick = function () {
+  input.parentNode.removeChild(input);
+  btn.parentNode.removeChild(btn);
+let img = document.createElement("img");
+img.src = "Images/no.png";
+img.style.width = "40px";
+img.style.right = "40px";
+img.style.marginLeft = "50px";
+document.getElementById("pr3").appendChild(img);
+};
+}
+</script>
+
+
+
+<script>
+function input() {
+var nome = document.getElementById("nome");
+var tel = document.getElementById("tel"); 
+var posti = document.getElementById("posti");
+var città = document.getElementById("città"); 
+var regione = document.getElementById("regione");
+var via = document.getElementById("via"); 
+var istruzione = document.getElementById("lavofferto");
+
+    var letter = ('^[a-zA-Z]+$');
+  
+  
+    if(!isNaN(tel.value)){}
+    else{
+      alert("Attenzione! Il campo NUMERO DI TELEFONO richiede solo numeri"); 
+      return false;
+    }
+
+    if(!isNaN(posti.value)){}
+    else{
+      alert("Attenzione! Il campo NUMERO DI POSTI richiede solo numeri"); 
+      return false;
+    }
+    
+    if(città.value.match(letter)) {}
+    else{ 
+      alert("Attenzione! Il campo CITTA' richiede solo lettere");
+    return false; 
+    }
+
+    if(regione.value.match(letter)) {}
+    else{ 
+      alert("Attenzione! Il campo REGIONE richiede solo lettere");
+    return false; 
+    }
+    
+    if(istruzione.value.match(letter)) {}
+    else{ 
+      alert("Attenzione! Il campo ISTRUZIONE richiede solo lettere");
+    return false; 
+    }
+
+
+
+if(nome.value!=""&&tel.value!=""&&posti.value!=""&&città.value!=""&&regione.value!=""&&via.value!=""&&istruzione.value!=""){
+var tr = document.getElementById("list");
+var td = document.createElement("td");
+var td1= document.createElement("td");
+var td2 = document.createElement("td");
+var td3 = document.createElement("td");
+var td4 = document.createElement("td");
+var td5 = document.createElement("td");
+var td6 = document.createElement("td");
+var th = document.createElement("th");
+let img = document.createElement("img");
+img.src = "Images/air.png";
+img.style.width = "80px";
+img.style.right = "80px";
+let img2 = document.createElement("img");
+img2.src = "Images/cestino.png";
+img2.style.width = "45px";
+img2.style.right = "45px";
+th.appendChild(document.createTextNode("AIR CAMPANIA SRL"));
+td.appendChild(document.createTextNode(istruzione.value));
+td3.appendChild(document.createTextNode(città.value));
+td2.appendChild(document.createTextNode(regione.value));
+td1.appendChild(document.createTextNode(tel.value));
+td4.appendChild(img);
+td5.appendChild(document.createTextNode(via.value));
+td6.appendChild(img2);
+tr.appendChild(th);
+tr.appendChild(td1);
+tr.appendChild(td3);
+tr.appendChild(td2);
+tr.appendChild(td5);
+td6.appendChild(img2);
+tr.appendChild(td4);
+tr.appendChild(td);
+tr.appendChild(td6);
+img2.onclick = function () {
+var elem3 = document.getElementById("list");
+  elem3.parentNode.removeChild(elem3);
+};
+document.getElementById("modifica").style.display = "none";
+document.getElementById("stato").style.display = "block";
+var elem = document.getElementById("disa");
+  elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("reset");
+elem1.parentNode.removeChild(elem1);
+  
+let btn = document.createElement("button");
+btn.innerHTML = "Fatto";
+btn.style.width="125px";
+document.getElementById("ec").appendChild(btn);
+btn.onclick = function () {
+var tr1 = document.getElementById("list1");
+var td7 = document.createElement("td");
+var td8= document.createElement("td");
+var td9 = document.createElement("td");
+var td10 = document.createElement("td");
+var td11 = document.createElement("td");
+var td12 = document.createElement("td");
+var td13 = document.createElement("td");
+var th1 = document.createElement("th");
+let img1 = document.createElement("img");
+img1.src = "Images/air.png";
+img1.style.width = "80px";
+img1.style.right = "80px";
+let img3 = document.createElement("img");
+img3.src = "Images/cestino.png";
+img3.style.width = "45px";
+img3.style.right = "45px";
+th1.appendChild(document.createTextNode("AIR CAMPANIA SRL"));
+td7.appendChild(document.createTextNode(istruzione.value));
+td8.appendChild(document.createTextNode(tel.value));
+td9.appendChild(document.createTextNode(regione.value));
+td10.appendChild(document.createTextNode(città.value));
+td11.appendChild(img1);
+td12.appendChild(document.createTextNode(via.value));
+td13.appendChild(img3);
+tr1.appendChild(th1);
+tr1.appendChild(td8);
+tr1.appendChild(td10);
+tr1.appendChild(td9);
+tr1.appendChild(td12);
+tr1.appendChild(td11);
+tr1.appendChild(td7);
+tr1.appendChild(td13);
+img3.onclick = function () {
+var elem4 = document.getElementById("list1");
+  elem4.parentNode.removeChild(elem4);
+};
+btn.disabled = true;
+document.getElementById("modifica").style.display = "none";
+document.getElementById("stato").style.display = "block";
+};
+
+let btn1 = document.createElement("button");
+btn1.innerHTML = "Annulla";
+btn1.style.width="125px";
+btn1.style.marginLeft = "15px";
+document.getElementById("ec").appendChild(btn1);
+
+btn1.onclick = function () {
+document.getElementById("modifica").style.display = "none";
+document.getElementById("stato").style.display = "block";
+};
+}
+else{
+alert("Errore")
+}
+
+}
+
+</script>
+
+
+
+
+
+<script>
+function annulla() {
+document.getElementById("modifica").style.display = "none";
+document.getElementById("stato").style.display = "block";
+}
+</script>
+
+
+<script>
+function elimina() {
+var elem = document.getElementById("el");
+  elem.parentNode.removeChild(elem);
+}
+</script>
+
+<script>
+function elimina1() {
+var elem = document.getElementById("el1");
+  elem.parentNode.removeChild(elem);
+}
+</script>
+
+
+<script>
+function elimina2() {
+var elem = document.getElementById("el2");
+  elem.parentNode.removeChild(elem);
+}
+</script>
+	  <div class="instragram" style="position: fixed; left: 0px; bottom: 0px;">
+    <a href="https://www.instagram.com/immigration_progetto/"> <img src="Images/instagram.png" style="width: 30px; height: 30px;"></a>     
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script type="text/javascript">
+
+function registrazione(){
+  var name = document.getElementById("nome");
+  var cogn = document.getElementById("cogn");
+  var numt = document.getElementById("numtel");
+  var naz = document.getElementById("naz");
+
+  var letter = ('^[a-zA-Z]+$');
+
+  if(name.value.match(letter)) {}
+  else{ 
+    alert("Attenzione! Il campo NOME richiede solo lettere");
+	return false; 
+  }
+
+  if(!isNaN(numt.value)){}
+  else{
+  	alert("Attenzione! Il campo NUMERO DI TELEFONO richiede solo numeri"); 
+  	return false;
+  }
+	
+  if(cogn.value.match(letter)) {}
+  else{ 
+    alert("Attenzione! Il campo COGNOME richiede solo lettere");
+	return false; 
+  }
+  
+  if(naz.value.match(letter)) {}
+  else{ 
+    alert("Attenzione! Il campo NAZIONALITA' richiede solo lettere");
+	return false; 
+  }
+window.location.href = "login-utente.html";
+}
+	
+
+</script>
+
+<script type="text/javascript">
+
+function annulla(){
+ 
+  window.location.href = "../home.html";
+}
+	
+</script>
+
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../CSS/ProductViewReg.css">
+<meta charset="ISO-8859-1">
+<meta name="author" content="Michele Del Mastro">
+<title>REGISTRAZIONE</title>
+
+
+</head>
+<body>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-caption d-none d-md-block">
+
+        <div class="flex-container">
+        <div style='margin-right:25px;'><img src="Images/Catturad.png" alt="foto" id="foto" width="320px" height="500px" ></div>
+        <div>
+          <br>
+       
+  
+				<legend><b>Registrazione</b></legend>
+				<br>
+        
+				<input type="text" id = "user" name="id" placeholder="Username">
+				<br>
+
+				<br>
+				<input type="text" id = "nome" name="name" placeholder="Nome">
+				<br>
+
+				<br>
+				<input type="text" id = "cogn" name="surname" placeholder="Cognome">
+				<br>
+
+				<br>
+				<input type="text" id = "istr" name="istruzione" maxlength="20" placeholder="Istruzione">
+				<br>
+
+				<br>
+				<input type="text" id = "numtel" name="numtel" placeholder="Numero di telefono">
+				<br>
+
+				<br>
+				<input type="text" id = "naz" name="nazionalita" placeholder="Nazionalita'">
+				<br>
+
+				<br>
+				<input type="password" id = "pw" name="password" placeholder="Password">
+        <br>
+
+			<br>
+				
+			<button id = "iscriviti" onclick="registrazione()">Iscriviti</button>
+			<button id = "annulla" onclick="annulla()">Annulla</button>
+		
+  </div>
+  </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+<div class="image"></div>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../CSS/VisualizzaInfoAzienda.css" type="text/css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/f">
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<title>Immigration</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+                  <a href="../home.html" class="navbar-brand"><img src="Images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"><input type="submit" value="Immigration" style="border: none; outline: none; background-color: transparent;">
+                       
+          </a>
+          <ul class="nav justify-content-end">
+                     <li class="nav-item">
+              <a id="prova" class="nav-link active" aria-current="page" href="scelta-login.html">Login</a>
+            </li>
+          
+             
+            <li class="nav-item">
+              <a id="prova" class="nav-link" href="scelta-iscrizione.html">Registrati</a>
+            </li>
+            
+          </ul>
+        </div>
+     </nav>
+
+    <div id="circle">
+       <div id="text"> 
+
+        <h3 id="info"></h3>
+        <div id="image">
+            <img id="foto" width="220" height="120">
+        </div>
+
+       </div>
+    </div>
+
+    <div class="background">
+        <div class="container">
+          <div class="panel pricing-table">
+            
+            <div class="pricing-plan">
+              <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+              <h2 class="pricing-header">Info</h2>
+              <ul class="pricing-features">
+                <li class="pricing-features-item"><p id="numero"></p></li>
+                <li class="pricing-features-item" id="città"></li>
+                <li class="pricing-features-item" id="regione"></li>
+                <li class="pricing-features-item" id="via"></li>
+                <a href="#/" class="pricing-button"> <button  style="border: none; background: transparent;"onclick="indietro()">Ritorna alla lista</button></a>
+              </ul>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+
+		  
+<script>
+let info = sessionStorage.getItem("info");
+document.getElementById("info").innerHTML = info;
+
+let foto = sessionStorage.getItem("foto");
+document.getElementById("foto").src = foto;
+
+let numero = sessionStorage.getItem("numero");
+document.getElementById("numero").innerHTML = numero;
+
+let città = sessionStorage.getItem("città");
+document.getElementById("città").innerHTML = città;
+
+let regione = sessionStorage.getItem("regione");
+document.getElementById("regione").innerHTML = regione;
+
+let via = sessionStorage.getItem("via");
+document.getElementById("via").innerHTML = via;
+</script>
+
+<script>
+function indietro() {
+sessionStorage.clear();
+window.location.href = "ListaSenzaLoginAlloggi.html";
+}
+</script>
+
+      
+	  </div>
+	  
+	    <div class="instragram" style="position: fixed; left: 0px; bottom: 0px;">
+    <a href="https://www.instagram.com/immigration_progetto/"> <img src="Images/instagram.png" style="width: 30px; height: 30px;"></a>     
+  </div>
+
+</body>
+</html>
